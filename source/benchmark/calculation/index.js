@@ -18,7 +18,7 @@ Benchmark.Suite( "Group of two users" )
   .add( "resultForGroup", () => resultForGroup( expenses, "Bill" ) )
   .add( "resultForTwo", () => resultForTwo( expenses, "Bill" ) )
   // add listeners
-  .on( "cycle", function ( event ) {
+  .on( "cycle", event => {
     console.log( String( event.target ) );
   } )
   .on( "complete", function () {
